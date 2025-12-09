@@ -70,7 +70,7 @@ document.getElementById('inquiryForm').addEventListener('submit', async function
         button.innerText = 'Sending...';
         button.disabled = true;
 
-        const response = await fetch('http://localhost:5000/api/inquiry', {
+        const response = await fetch('https://kashmiri-authentic-exports-production.up.railway.app/api/inquiry', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
