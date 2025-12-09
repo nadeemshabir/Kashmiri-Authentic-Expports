@@ -26,8 +26,8 @@ require('dotenv').config();
 // Create transporter for Brevo (Sendinblue)
 const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST || "smtp-relay.brevo.com",
-    port: Number(process.env.EMAIL_PORT) || 587,
-    secure: false, // Brevo uses TLS on port 587 (not SSL)
+    port: Number(process.env.EMAIL_PORT) || 465,
+    secure: true, // Brevo uses SSL on port 465
     auth: {
         user: process.env.EMAIL_USER,   // e.g. 93d0e3001@smtp-brevo.com
         pass: process.env.EMAIL_PASS    // Brevo SMTP key
